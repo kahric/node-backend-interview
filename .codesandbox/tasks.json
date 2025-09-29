@@ -1,0 +1,31 @@
+{
+  "setupTasks": [
+    {
+      "name": "Install dependencies",
+      "command": "npm install"
+    },
+    {
+      "name": "Run migrations",
+      "command": "npm run migrate"
+    },
+    {
+      "name": "Seed database",
+      "command": "npm run seed"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "Start server",
+      "command": "npm start",
+      "runAt": "onStart",
+      "preview": {
+        "port": 3000
+      }
+    },
+    {
+      "name": "Run tests",
+      "command": "npm test",
+      "runAt": "onDemand"
+    }
+  ]
+}
